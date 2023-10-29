@@ -6,7 +6,10 @@
 //
 
 #import "AppDelegate.h"
-
+@import FirebaseCore;
+@import FirebaseFirestore;
+@import FirebaseAuth;
+@import IQKeyboardManager;
 @interface AppDelegate ()
 
 @end
@@ -16,6 +19,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [FIRApp configure];
+    IQKeyboardManager.sharedManager.enable = true;
     return YES;
 }
 
